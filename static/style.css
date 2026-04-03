@@ -1,4 +1,4 @@
-/* Flexoki-inspired palette */
+/* Flexoki palette — light mode */
 :root {
   --bg:      #fffcf0;
   --tx:      #100f0f;
@@ -9,16 +9,15 @@
   --accent-h:#3aa99f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:      #100f0f;
-    --tx:      #fffcf0;
-    --tx-2:    #cecdc3;
-    --tx-3:    #878580;
-    --ui:      #282726;
-    --accent:  #3aa99f;
-    --accent-h:#5ec4ba;
-  }
+/* Dark mode via JS class (also respects OS preference on first visit) */
+html.theme-dark {
+  --bg:      #100f0f;
+  --tx:      #fffcf0;
+  --tx-2:    #cecdc3;
+  --tx-3:    #878580;
+  --ui:      #282726;
+  --accent:  #3aa99f;
+  --accent-h:#5ec4ba;
 }
 
 *, *::before, *::after {
@@ -39,6 +38,7 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0 1.25rem;
+  transition: background 0.15s, color 0.15s;
 }
 
 /* Nav */
@@ -65,6 +65,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -75,6 +76,22 @@ nav {
 }
 
 .nav-links a:hover {
+  color: var(--tx);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--tx-3);
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.theme-toggle:hover {
   color: var(--tx);
 }
 
@@ -251,6 +268,24 @@ section h1 {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--tx-2);
+}
+
+/* Standalone pages (About, Now) */
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+  font-size: 1.65rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.page-updated {
+  font-family: system-ui, sans-serif;
+  font-size: 0.825rem;
+  color: var(--tx-3);
+  margin-top: 0.4rem;
 }
 
 /* Footer */
