@@ -1,0 +1,264 @@
+/* Flexoki-inspired palette */
+:root {
+  --bg:      #fffcf0;
+  --tx:      #100f0f;
+  --tx-2:    #403e3c;
+  --tx-3:    #878580;
+  --ui:      #e6e4d9;
+  --accent:  #24837b;
+  --accent-h:#3aa99f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #100f0f;
+    --tx:      #fffcf0;
+    --tx-2:    #cecdc3;
+    --tx-3:    #878580;
+    --ui:      #282726;
+    --accent:  #3aa99f;
+    --accent-h:#5ec4ba;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--tx);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Nav */
+header {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid var(--ui);
+  margin-bottom: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-title {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--tx);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-family: system-ui, sans-serif;
+  font-size: 0.875rem;
+  color: var(--tx-2);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--tx);
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s;
+}
+
+a:hover {
+  text-decoration-color: var(--accent-h);
+}
+
+/* Home */
+.intro {
+  color: var(--tx-2);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* Post list */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--ui);
+  gap: 1rem;
+}
+
+.post-item a {
+  color: var(--tx);
+  text-decoration: none;
+  font-size: 0.975rem;
+}
+
+.post-item a:hover {
+  color: var(--accent);
+}
+
+.post-item time {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--tx-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Article */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  font-size: 1.65rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.post-meta {
+  font-family: system-ui, sans-serif;
+  font-size: 0.825rem;
+  color: var(--tx-3);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: var(--ui);
+  color: var(--tx-2);
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  font-size: 0.775rem;
+}
+
+/* Content typography */
+.content h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.5rem;
+}
+
+.content p {
+  margin-bottom: 1.25rem;
+}
+
+.content ul, .content ol {
+  margin: 0 0 1.25rem 1.4rem;
+}
+
+.content li {
+  margin-bottom: 0.3rem;
+}
+
+.content blockquote {
+  border-left: 2px solid var(--ui);
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  color: var(--tx-2);
+  font-style: italic;
+}
+
+.content code {
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 0.85em;
+  background: var(--ui);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.content pre {
+  background: var(--ui);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--ui);
+  margin: 2rem 0;
+}
+
+/* Post footer */
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ui);
+  font-family: system-ui, sans-serif;
+  font-size: 0.875rem;
+}
+
+.post-footer a {
+  color: var(--tx-2);
+  text-decoration: none;
+}
+
+.post-footer a:hover {
+  color: var(--accent);
+}
+
+/* Section heading */
+section h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--tx-2);
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--ui);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--tx-3);
+}

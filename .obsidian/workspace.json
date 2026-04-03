@@ -187,6 +187,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c2ab3903a9be868",
-  "lastOpenFiles": []
+  "active": "412296edf4fb3e1d",
+  "lastOpenFiles": [
+    "layouts/_default/list.html",
+    "layouts/_default/single.html",
+    "layouts/_default/baseof.html",
+    "layouts/_default",
+    "layouts/index.html",
+    "content/posts/hello.md",
+    "content/posts",
+    "content/about.md",
+    "static/style.css"
+  ]
 }

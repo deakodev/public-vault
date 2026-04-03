@@ -1,9 +1,14 @@
 baseURL = "https://mellow-queijadas-37f4c7.netlify.app/"
 languageCode = "en-us"
-title = "Zachary Deak"
+title = "Zach Deak"
+
+[params]
+  author = "Zach Deak"
+  description = "Physician. PhD student in Human-Centered Computing at Georgia Tech."
 
 [markup.goldmark.renderer]
-  unsafe = true          # allows raw HTML in notes if needed
+  unsafe = true
 
 [markup.highlight]
   style = "monochrome"
+  noClasses = true
