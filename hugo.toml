@@ -1,0 +1,9 @@
+baseURL = "https://yourdomain.com"
+languageCode = "en-us"
+title = "Zachary Deak"
+
+[markup.goldmark.renderer]
+  unsafe = true          # allows raw HTML in notes if needed
+
+[markup.highlight]
+  style = "monochrome"
