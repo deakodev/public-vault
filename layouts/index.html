@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section>
   <p class="intro">{{ .Site.Params.description }}</p>
-  <p class="writing-label">Writing</p>
+  <p class="writing-label">Essays</p>
   <ul class="writing-list">
     {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
     <li>

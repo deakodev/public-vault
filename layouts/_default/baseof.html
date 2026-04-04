@@ -19,21 +19,15 @@
         <a href="/" class="site-title">{{ .Site.Title }}</a>
         {{ if not .IsHome }}
           <span class="sep">/</span>
-          {{ if eq .Section "posts" }}
-            <a href="/posts" class="bc-link">Essays</a>
-          {{ else if eq .Section "projects" }}
-            <a href="/projects" class="bc-link">Projects</a>
-          {{ else if eq .Section "bio" }}
-            <a href="/bio" class="bc-link">Bio</a>
-          {{ else }}
-            <span class="bc-current">{{ .Title }}</span>
+          {{ if eq .Section "essays" }}
+            <a href="/essays" class="bc-link">Essays</a>
           {{ end }}
         {{ end }}
       </div>
       <div class="nav-links">
           <a href="/bio">Bio</a>
         <span class="sep">/</span>
-         <a href="/posts">Essays</a>
+         <a href="/essays">Essays</a>
         <span class="sep">/</span>
           <a href="/projects">Projects</a>
         <span class="sep">/</span>

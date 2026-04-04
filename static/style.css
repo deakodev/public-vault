@@ -65,7 +65,7 @@ nav {
 /* Left: breadcrumb */
 .breadcrumb {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0;
   flex-wrap: wrap;
   font-size: 0.875rem;

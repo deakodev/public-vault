@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "Research"
 date: 2026-01-15
 description: "One sentence for the index."
 draft: false

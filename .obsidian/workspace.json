@@ -189,6 +189,13 @@
   },
   "active": "412296edf4fb3e1d",
   "lastOpenFiles": [
+    "content/essays/on-staying-a-beginner.md",
+    "content/essays/hello.md",
+    "content/essays/designing-for-uncertainty.md",
+    "content/essays",
+    "content/research.md",
+    "content/projects copy.md",
+    "static/style.css.tmp.27728.1775319641533",
     "static/style.css.tmp.27728.1775318854220",
     "static/style.css.tmp.27728.1775318851347",
     "content/projects.md",
@@ -201,7 +208,6 @@
     "layouts/index.html",
     "content/posts/hello.md",
     "content/posts",
-    "content/about.md",
-    "static/style.css"
+    "content/about.md"
   ]
 }

@@ -1,5 +1,5 @@
 ---
-title: "Now"
+title: "Essays"
 draft: false
 updated: "April 2026"
 ---
@@ -14,4 +14,4 @@ updated: "April 2026"
 
 ---
 
-*This page is inspired by [Derek Sivers' /now movement](https://nownownow.com/about).*
+_This page is inspired by [Derek Sivers' /now movement](https://nownownow.com/about)._
