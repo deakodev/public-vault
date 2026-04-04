@@ -189,6 +189,9 @@
   },
   "active": "412296edf4fb3e1d",
   "lastOpenFiles": [
+    "content/projects.md",
+    "content/essays.md",
+    "content/bio.md",
     "layouts/_default/list.html",
     "layouts/_default/single.html",
     "layouts/_default/baseof.html",

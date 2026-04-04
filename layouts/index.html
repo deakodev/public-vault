@@ -1,13 +1,16 @@
 {{ define "main" }}
-<section class="home">
+<section>
   <p class="intro">{{ .Site.Params.description }}</p>
-  <div class="post-list">
+  <p class="writing-label">Writing</p>
+  <ul class="writing-list">
     {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-    <div class="post-item">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <time>{{ .Date.Format "2006-01-02" }}</time>
-    </div>
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="post-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="post-title">{{ .Title }}</span>
+      </a>
+    </li>
     {{ end }}
-  </div>
+  </ul>
 </section>
 {{ end }}
