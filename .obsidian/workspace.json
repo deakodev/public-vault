@@ -189,6 +189,17 @@
   },
   "active": "412296edf4fb3e1d",
   "lastOpenFiles": [
+    "content/research/hci-and-medical-education.md",
+    "content/research/dissertation.md",
+    "content/projects/bedbug.md",
+    "content/projects/neuroanatomy.md",
+    "content/projects/medstudforty.md",
+    "content/research/_index.md",
+    "content/research",
+    "content/projects/_index.md",
+    "content/projects",
+    "content/essays/_index.md",
+    "content/essays/how-i-take-notes.md",
     "content/essays/on-staying-a-beginner.md",
     "content/essays/hello.md",
     "content/essays/designing-for-uncertainty.md",
@@ -205,9 +216,7 @@
     "layouts/_default/single.html",
     "layouts/_default/baseof.html",
     "layouts/_default",
-    "layouts/index.html",
     "content/posts/hello.md",
-    "content/posts",
     "content/about.md"
   ]
 }

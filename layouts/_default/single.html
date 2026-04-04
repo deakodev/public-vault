@@ -1,5 +1,6 @@
 {{ define "main" }}
-{{ if eq .Section "posts" }}
+{{ $section := .Section }}
+{{ if or (eq $section "essays") (eq $section "projects") (eq $section "research") }}
 <article>
   <header class="post-header">
     <h1>{{ .Title }}</h1>
@@ -16,7 +17,7 @@
     {{ .Content }}
   </div>
   <footer class="post-footer">
-    <a href="/essays">← All essays</a>
+    <a href="/{{ $section }}">← All {{ $section }}</a>
   </footer>
 </article>
 {{ else }}

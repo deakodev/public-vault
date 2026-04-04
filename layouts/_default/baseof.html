@@ -15,21 +15,15 @@
 <body>
   <header>
     <nav>
-      <div class="breadcrumb">
-        <a href="/" class="site-title">{{ .Site.Title }}</a>
-        {{ if not .IsHome }}
-          <span class="sep">/</span>
-          {{ if eq .Section "essays" }}
-            <a href="/essays" class="bc-link">Essays</a>
-          {{ end }}
-        {{ end }}
-      </div>
+      <a href="/" class="site-title">{{ .Site.Title }}</a>
       <div class="nav-links">
-          <a href="/bio">Bio</a>
+        <a href="/bio">Bio</a>
         <span class="sep">/</span>
-         <a href="/essays">Essays</a>
+        <a href="/essays">Essays</a>
         <span class="sep">/</span>
-          <a href="/projects">Projects</a>
+        <a href="/projects">Projects</a>
+        <span class="sep">/</span>
+        <a href="/research">Research</a>
         <span class="sep">/</span>
         <button class="theme-toggle" id="theme-toggle" title="Toggle theme (D)" aria-label="Toggle dark mode">◐</button>
       </div>
@@ -39,7 +33,7 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}</p>
+    <p>© {{ now.Format "2006" }} Zachary Deak</p>
   </footer>
   <script>
     var btn = document.getElementById('theme-toggle');

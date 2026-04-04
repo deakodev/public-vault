@@ -3,10 +3,14 @@ title: "Bio"
 draft: false
 ---
 
-I'm a physician and PhD student in Human-Centered Computing at Georgia Tech.
+I'm Zachary Deak — a physician (DO) and PhD student in Human-Centered Computing at Georgia Tech.
 
-My research sits at the intersection of medicine and design — how we build tools that fit the way clinicians actually think and work. I'm particularly interested in how interfaces shape cognition under uncertainty, and what it means to design for high-stakes decisions in time-pressured environments.
+My work sits at the intersection of medicine and design. I build tools that make healthcare and education more personal, accessible, and sustainable. My dissertation focuses on how clinicians interact with decision support systems during high-stakes, time-critical workflows — specifically the gap between what a system surfaces and what a provider actually attends to.
 
-Clinically, practice constantly hands me research questions. The gap between what systems are designed to do and what people actually need to do is never more visible than at the bedside.
+Clinically, every shift generates more questions than it answers. The gap between what systems are designed to do and what people actually need is never more visible than at the bedside.
 
-This site is where I think out loud. Notes on papers, observations from clinic and lab, things I keep returning to.
+Before the PhD, I studied osteopathic medicine at Michigan State University. I'm interested in cognitive systems engineering, interface design, and building software that works the way people actually think.
+
+---
+
+[Email](mailto:deakzach@msu.edu) · [GitHub](https://github.com/deakodev) · [LinkedIn](https://www.linkedin.com/in/deakodev/) · [CV](/deak_cv.pdf)

@@ -1,9 +1,41 @@
 {{ define "main" }}
 <section>
   <p class="intro">{{ .Site.Params.description }}</p>
+
+  <p class="writing-label">Latest</p>
+  <ul class="latest-list">
+    {{ range first 1 (where .Site.RegularPages "Section" "essays").ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Essay</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ range first 1 (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Project</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ range first 1 (where .Site.RegularPages "Section" "research").ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Research</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+
   <p class="writing-label">Essays</p>
   <ul class="writing-list">
-    {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+    {{ range (where .Site.RegularPages "Section" "essays").ByDate.Reverse }}
     <li>
       <a href="{{ .Permalink }}">
         <span class="post-date">{{ .Date.Format "2006 · 01" }}</span>
@@ -12,5 +44,6 @@
     </li>
     {{ end }}
   </ul>
+
 </section>
 {{ end }}

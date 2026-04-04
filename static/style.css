@@ -22,11 +22,7 @@ html.theme-dark {
 }
 
 /* ─── Reset ─── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── Base ─── */
 html { font-size: 18px; }
@@ -42,11 +38,7 @@ body {
   transition: background 0.15s, color 0.15s;
 }
 
-/* ─── Links ─── */
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
 /* ─── Header & Nav ─── */
 header {
@@ -62,17 +54,6 @@ nav {
   flex-wrap: wrap;
 }
 
-/* Left: breadcrumb */
-.breadcrumb {
-  display: flex;
-  align-items: baseline;
-  gap: 0;
-  flex-wrap: wrap;
-  font-size: 0.875rem;
-  font-weight: 500;
-  min-width: 0;
-}
-
 .site-title {
   font-family: 'Caveat', cursive;
   font-weight: 700;
@@ -83,41 +64,23 @@ nav {
   line-height: 1;
 }
 
-.bc-link {
-  color: var(--tx-2);
-  font-weight: 500;
-}
-
-.bc-link:hover { color: var(--tx); }
-
-.bc-current {
-  color: var(--tx-3);
-  font-weight: 400;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 200px;
-}
-
-/* Right: nav links */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 0;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   flex-shrink: 0;
 }
 
 .nav-links a {
   color: var(--tx-3);
-  font-weight: 500;
   transition: color 0.15s;
   white-space: nowrap;
 }
 
 .nav-links a:hover { color: var(--tx); }
 
-/* Slash separators */
 .sep {
   color: var(--ui-2);
   padding: 0 0.45rem;
@@ -125,7 +88,6 @@ nav {
   font-weight: 400;
 }
 
-/* Theme toggle */
 .theme-toggle {
   background: none;
   border: none;
@@ -143,32 +105,67 @@ nav {
 /* ─── Home intro ─── */
 .intro {
   color: var(--tx-2);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.75rem;
   font-size: 0.975rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* ─── Writing list (stephango-style) ─── */
+/* ─── Section label ─── */
 .writing-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--tx-3);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
-.writing-list {
+/* ─── Latest section ─── */
+.latest-list {
   list-style: none;
+  margin-bottom: 3rem;
 }
 
-.writing-list li {
-  border-top: 1px solid var(--ui);
+.latest-list li { border-top: 1px solid var(--ui); }
+.latest-list li:last-child { border-bottom: 1px solid var(--ui); }
+
+.latest-list a {
+  display: grid;
+  grid-template-columns: 6rem 5.5rem 1fr;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.55rem 0;
+  color: var(--tx);
+  transition: color 0.15s;
 }
 
-.writing-list li:last-child {
-  border-bottom: 1px solid var(--ui);
+.latest-list a:hover { color: var(--accent); }
+
+.latest-date {
+  font-size: 0.75rem;
+  color: var(--tx-3);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
+
+.latest-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tx-3);
+}
+
+.latest-title {
+  font-size: 0.925rem;
+  font-weight: 500;
+}
+
+/* ─── Writing/section list ─── */
+.writing-list { list-style: none; margin-bottom: 3rem; }
+
+.writing-list li { border-top: 1px solid var(--ui); }
+.writing-list li:last-child { border-bottom: 1px solid var(--ui); }
 
 .writing-list a {
   display: flex;
@@ -181,7 +178,7 @@ nav {
 
 .writing-list a:hover { color: var(--accent); }
 
-.writing-list .post-date {
+.post-date {
   font-size: 0.775rem;
   color: var(--tx-3);
   white-space: nowrap;
@@ -190,12 +187,12 @@ nav {
   letter-spacing: 0.02em;
 }
 
-.writing-list .post-title {
+.post-title {
   font-size: 0.925rem;
   font-weight: 500;
 }
 
-/* ─── Section heading ─── */
+/* ─── Section page heading ─── */
 .section-title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -205,9 +202,7 @@ nav {
 }
 
 /* ─── Article ─── */
-.post-header {
-  margin-bottom: 2.5rem;
-}
+.post-header { margin-bottom: 2.5rem; }
 
 .post-header h1 {
   font-size: 1.6rem;
@@ -239,10 +234,7 @@ nav {
 }
 
 /* ─── Content typography ─── */
-.content {
-  font-size: 0.975rem;
-  line-height: 1.8;
-}
+.content { font-size: 0.975rem; line-height: 1.8; }
 
 .content h2 {
   font-size: 1.05rem;
@@ -259,11 +251,7 @@ nav {
 
 .content p { margin-bottom: 1.25rem; }
 
-.content ul,
-.content ol {
-  margin: 0 0 1.25rem 1.4rem;
-}
-
+.content ul, .content ol { margin: 0 0 1.25rem 1.4rem; }
 .content li { margin-bottom: 0.3rem; }
 
 .content blockquote {
@@ -282,9 +270,7 @@ nav {
   transition: text-decoration-color 0.15s;
 }
 
-.content a:hover {
-  text-decoration-color: var(--accent-h);
-}
+.content a:hover { text-decoration-color: var(--accent-h); }
 
 .content code {
   font-family: ui-monospace, 'Cascadia Code', monospace;
@@ -302,38 +288,22 @@ nav {
   margin: 1.25rem 0;
 }
 
-.content pre code {
-  background: none;
-  padding: 0;
-  font-size: 0.875rem;
-}
-
-.content hr {
-  border: none;
-  border-top: 1px solid var(--ui);
-  margin: 2rem 0;
-}
+.content pre code { background: none; padding: 0; font-size: 0.875rem; }
+.content hr { border: none; border-top: 1px solid var(--ui); margin: 2rem 0; }
 
 /* ─── Post footer ─── */
 .post-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--ui);
-  font-size: 0.825rem;
+  font-size: 0.875rem;
 }
 
-.post-footer a {
-  color: var(--tx-3);
-  font-weight: 500;
-  transition: color 0.15s;
-}
-
+.post-footer a { color: var(--tx-3); font-weight: 500; transition: color 0.15s; }
 .post-footer a:hover { color: var(--accent); }
 
-/* ─── Standalone pages (About, Now) ─── */
-.page-header {
-  margin-bottom: 2.5rem;
-}
+/* ─── Standalone pages ─── */
+.page-header { margin-bottom: 2.5rem; }
 
 .page-header h1 {
   font-size: 1.6rem;
