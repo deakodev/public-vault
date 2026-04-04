@@ -20,18 +20,22 @@
         {{ if not .IsHome }}
           <span class="sep">/</span>
           {{ if eq .Section "posts" }}
-            <a href="/posts" class="bc-link">Writing</a>
+            <a href="/posts" class="bc-link">Essays</a>
+          {{ else if eq .Section "projects" }}
+            <a href="/projects" class="bc-link">Projects</a>
+          {{ else if eq .Section "bio" }}
+            <a href="/bio" class="bc-link">Bio</a>
           {{ else }}
             <span class="bc-current">{{ .Title }}</span>
           {{ end }}
         {{ end }}
       </div>
       <div class="nav-links">
-        <a href="/posts">Writing</a>
+          <a href="/bio">Bio</a>
         <span class="sep">/</span>
-        <a href="/now">Now</a>
+         <a href="/posts">Essays</a>
         <span class="sep">/</span>
-        <a href="/about">About</a>
+          <a href="/projects">Projects</a>
         <span class="sep">/</span>
         <button class="theme-toggle" id="theme-toggle" title="Toggle theme (D)" aria-label="Toggle dark mode">◐</button>
       </div>
