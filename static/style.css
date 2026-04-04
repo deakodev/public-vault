@@ -92,12 +92,14 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--tx-3);
   padding: 0;
   line-height: 1;
   font-family: inherit;
   transition: color 0.15s;
+  position: relative;
+  top: -1px;
 }
 
 .theme-toggle:hover { color: var(--tx); }
