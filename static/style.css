@@ -29,7 +29,7 @@ html.theme-dark {
 }
 
 /* ─── Base ─── */
-html { font-size: 17px; }
+html { font-size: 18px; }
 
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
@@ -75,11 +75,13 @@ nav {
 }
 
 .site-title {
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.4rem;
   letter-spacing: 0.01em;
   color: var(--tx);
   white-space: nowrap;
+  line-height: 1;
 }
 
 .bc-link {
