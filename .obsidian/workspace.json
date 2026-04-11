@@ -25,15 +25,18 @@
             "id": "5b38f1effc4cf075",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2026-04-05 19.51.25.excalidraw.md"
+                "file": "content/bio.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-04-05 19.51.25.excalidraw"
+              "icon": "lucide-file",
+              "title": "bio"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -204,10 +207,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5c2ab3903a9be868",
+  "active": "5b38f1effc4cf075",
   "lastOpenFiles": [
-    "content/essays/why-i-study-human-centered-computing.md",
+    "static/deak_cv.pdf",
     "Excalidraw/Drawing 2026-04-05 19.51.25.excalidraw.md",
+    "content/essays/_index.md",
+    "content/essays/why-i-study-human-centered-computing.md",
     "Excalidraw",
     "content/essays/how-i-take-notes.md",
     "content/essays/designing-for-uncertainty.md",
@@ -221,7 +226,6 @@
     "content/research",
     "content/projects/_index.md",
     "content/projects",
-    "content/essays/_index.md",
     "content/essays/on-staying-a-beginner.md",
     "content/essays/hello.md",
     "content/essays",

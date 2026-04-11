@@ -338,9 +338,9 @@ footer {
   gap: 1rem;
 }
 
-/* Scale down the BMC button to fit the footer */
-.footer-row .bmc-btn-text,
-.footer-row img {
-  transform: scale(0.85);
-  transform-origin: right center;
+/* Tighten the BMC button */
+.footer-row a.bmc-btn {
+  padding: 4px 10px !important;
+  height: auto !important;
+  font-size: 0.75rem !important;
 }
