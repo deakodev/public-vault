@@ -11,10 +11,26 @@
             "id": "5c2ab3903a9be868",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/essays/_index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "_index"
+            }
+          },
+          {
+            "id": "5b38f1effc4cf075",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-04-05 19.51.25.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-04-05 19.51.25.excalidraw"
             }
           }
         ]
@@ -184,11 +200,18 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "412296edf4fb3e1d",
+  "active": "5c2ab3903a9be868",
   "lastOpenFiles": [
+    "content/essays/why-i-study-human-centered-computing.md",
+    "Excalidraw/Drawing 2026-04-05 19.51.25.excalidraw.md",
+    "Excalidraw",
+    "content/essays/how-i-take-notes.md",
+    "content/essays/designing-for-uncertainty.md",
+    "static/style.css.tmp.27728.1775321187680",
     "content/research/hci-and-medical-education.md",
     "content/research/dissertation.md",
     "content/projects/bedbug.md",
@@ -199,10 +222,8 @@
     "content/projects/_index.md",
     "content/projects",
     "content/essays/_index.md",
-    "content/essays/how-i-take-notes.md",
     "content/essays/on-staying-a-beginner.md",
     "content/essays/hello.md",
-    "content/essays/designing-for-uncertainty.md",
     "content/essays",
     "content/research.md",
     "content/projects copy.md",
@@ -214,8 +235,6 @@
     "content/bio.md",
     "layouts/_default/list.html",
     "layouts/_default/single.html",
-    "layouts/_default/baseof.html",
-    "layouts/_default",
     "content/posts/hello.md",
     "content/about.md"
   ]

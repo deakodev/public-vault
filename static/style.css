@@ -330,3 +330,17 @@ footer {
   color: var(--tx-3);
   font-weight: 500;
 }
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Scale down the BMC button to fit the footer */
+.footer-row .bmc-btn-text,
+.footer-row img {
+  transform: scale(0.85);
+  transform-origin: right center;
+}
