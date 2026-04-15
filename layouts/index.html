@@ -1,6 +1,19 @@
 {{ define "main" }}
 <section>
-  <p class="intro">{{ .Site.Params.description }}</p>
+  <h1 class="sr-only">{{ .Site.Title }}</h1>
+  <div class="welcome-card">
+    <span class="welcome-card-text">Welcome to my digital garden.</span>
+  </div>
+  <p class="start-here">New here? See a snapshot of my work -- <a href="/portfolio"><strong>Portfolio</strong></a></p>
+
+  <p class="writing-label">Topics</p>
+  <div class="tag-cloud">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+    {{ if ne .Page.Title "Evergreen" }}
+    <a href="{{ .Page.Permalink }}" class="tag-link">{{ .Page.Title }}</a>
+    {{ end }}
+    {{ end }}
+  </div>
 
   <p class="writing-label">Latest</p>
   <ul class="latest-list">
@@ -33,13 +46,43 @@
     {{ end }}
   </ul>
 
+  {{ $evergreen := index .Site.Taxonomies.tags "evergreen" }}
+  {{ if $evergreen }}
+  <p class="writing-label">Evergreen</p>
+  <ul class="latest-list">
+    {{ range $evergreen.Pages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">{{ .Section | strings.TrimSuffix "s" | title }}<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline" aria-hidden="true"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg></span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
   <p class="writing-label">Essays</p>
-  <ul class="writing-list">
+  <ul class="latest-list">
     {{ range (where .Site.RegularPages "Section" "essays").ByDate.Reverse }}
     <li>
       <a href="{{ .Permalink }}">
-        <span class="post-date">{{ .Date.Format "2006 · 01" }}</span>
-        <span class="post-title">{{ .Title }}</span>
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Essay{{ if $evergreen }}{{ if in $evergreen.Pages . }}<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline" aria-hidden="true"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg>{{ end }}{{ end }}</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+
+  <p class="writing-label">Projects</p>
+  <ul class="latest-list">
+    {{ range (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Project{{ if $evergreen }}{{ if in $evergreen.Pages . }}<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline" aria-hidden="true"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg>{{ end }}{{ end }}</span>
+        <span class="latest-title">{{ .Title }}</span>
       </a>
     </li>
     {{ end }}

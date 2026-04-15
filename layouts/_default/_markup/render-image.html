@@ -1,0 +1,2 @@
+{{- $src := .Destination | strings.TrimPrefix "static/" -}}
+<img src="/{{ $src }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}>

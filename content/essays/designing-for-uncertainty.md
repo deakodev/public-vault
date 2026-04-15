@@ -2,7 +2,7 @@
 title: "Designing for uncertainty"
 date: 2026-02-18
 description: "Clinical decisions are rarely about missing information. They're about acting under irreducible uncertainty."
-tags: ["hci", "medicine", "research"]
+tags: ["HCI", "medicine", "research"]
 draft: false
 ---
 

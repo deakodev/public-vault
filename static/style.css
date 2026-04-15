@@ -3,11 +3,11 @@
   --bg:      #fffcf0;
   --tx:      #100f0f;
   --tx-2:    #403e3c;
-  --tx-3:    #878580;
+  --tx-3:    #767370; /* darkened from #878580 for WCAG AA contrast (4.6:1 on --bg) */
   --ui:      #e6e4d9;
   --ui-2:    #cecdc3;
-  --accent:  #24837b;
-  --accent-h:#3aa99f;
+  --accent:  #1a56a0;
+  --accent-h:#2e6dba;
 }
 
 html.theme-dark {
@@ -17,14 +17,63 @@ html.theme-dark {
   --tx-3:    #878580;
   --ui:      #282726;
   --ui-2:    #403e3c;
-  --accent:  #3aa99f;
-  --accent-h:#5ec4ba;
+  --accent:  #4d82b8;
+  --accent-h:#6699cc;
 }
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ─── Skip link ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--bg);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ─── Screen reader only ─── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Focus styles ─── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Smooth theme transition (only fires during toggle) ─── */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}
+
 /* ─── Base ─── */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 html { font-size: 18px; }
 
 body {
@@ -35,10 +84,11 @@ body {
   max-width: 740px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  transition: background 0.15s, color 0.15s;
 }
 
 a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
 
 /* ─── Header & Nav ─── */
 header {
@@ -80,6 +130,15 @@ nav {
 }
 
 .nav-links a:hover { color: var(--tx); }
+.nav-links a.nav-active { color: var(--tx); font-weight: 600; }
+
+/* ─── Mobile ─── */
+@media (max-width: 520px) {
+  nav { gap: 0.5rem; }
+  .nav-links { font-size: 0.8rem; }
+  .sep { padding: 0 0.25rem; }
+  .site-title { font-size: 1.4rem; }
+}
 
 .sep {
   color: var(--ui-2);
@@ -100,17 +159,77 @@ nav {
   transition: color 0.15s;
   position: relative;
   top: -1px;
+  display: flex;
+  align-items: center;
 }
 
 .theme-toggle:hover { color: var(--tx); }
 
+.theme-toggle svg { display: block; margin: 0; padding: 0; }
+.theme-toggle .icon-sun  { display: none; }
+html.theme-dark .theme-toggle .icon-sun  { display: block; }
+html.theme-dark .theme-toggle .icon-moon { display: none; }
+
+.icon-inline {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin: 0 0.3em;
+}
+
 /* ─── Home intro ─── */
 .intro {
   color: var(--tx-2);
-  margin-bottom: 2.75rem;
+  margin-bottom: 0.5rem;
   font-size: 0.975rem;
   line-height: 1.75;
 }
+
+.start-here {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--tx-2);
+  margin-bottom: 2.75rem;
+}
+
+.start-here a {
+  color: var(--accent);
+  transition: color 0.15s;
+}
+
+.start-here a:hover { color: var(--accent-h); }
+
+/* ─── Tag cloud ─── */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--ui);
+  border-bottom: 1px solid var(--ui);
+  margin-bottom: 3rem;
+}
+
+.tag-link {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--tx);
+  transition: color 0.15s;
+}
+
+.tag-link::after {
+  content: "·";
+  margin: 0 0.6rem;
+  color: var(--tx-3);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.tag-link:last-of-type::after { display: none; }
+
+.tag-link:hover { color: var(--accent); }
 
 /* ─── Section label ─── */
 .writing-label {
@@ -158,6 +277,17 @@ nav {
   color: var(--tx-3);
 }
 
+@media (max-width: 520px) {
+  .latest-list a {
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: auto auto;
+  }
+  .latest-tag {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
 .latest-title {
   font-size: 0.925rem;
   font-weight: 500;
@@ -195,6 +325,13 @@ nav {
 }
 
 /* ─── Section page heading ─── */
+.section-intro {
+  color: var(--tx-2);
+  font-size: 0.925rem;
+  margin-bottom: 1.75rem;
+  margin-top: -0.75rem;
+}
+
 .section-title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -236,7 +373,7 @@ nav {
 }
 
 /* ─── Content typography ─── */
-.content { font-size: 0.975rem; line-height: 1.8; }
+.content { font-size: 0.975rem; line-height: 1.8; overflow-wrap: break-word; word-break: break-word; }
 
 .content h2 {
   font-size: 1.05rem;
@@ -330,4 +467,186 @@ footer {
   color: var(--tx-3);
   font-weight: 500;
 }
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.footer-links a {
+  color: var(--tx-3) !important;
+  font-size: 0.775rem !important;
+  font-weight: 500 !important;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: var(--tx); }
+
+/* ─── Consulting selector ─── */
+.welcome-card {
+  min-height: 6rem;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ui-2);
+  margin-bottom: 0.75rem;
+}
+
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/cover-svg.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.welcome-card-text {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--tx);
+  text-align: center;
+}
+
+.consulting-question {
+  font-size: 1rem;
+  color: var(--tx-2);
+  margin-bottom: 2rem;
+  margin-top: -1.5rem;
+}
+
+.consulting-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.consulting-choice {
+  display: block;
+  border: 1px solid var(--ui-2);
+  padding: 1.4rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--tx);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.consulting-choice:hover { border-color: var(--accent); }
+
+.consulting-choice-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  transition: color 0.15s;
+}
+
+.consulting-choice:hover .consulting-choice-title { color: var(--accent); }
+
+.consulting-choice-desc {
+  font-size: 0.875rem;
+  color: var(--tx-3);
+  line-height: 1.6;
+}
+
+/* ─── Disclaimer block ─── */
+.disclaimer {
+  border-left: 2px solid var(--ui-2);
+  padding: 0.4rem 0 0.4rem 1.1rem;
+  color: var(--tx-3);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin: 1.75rem 0;
+}
+
+/* ─── Contact form ─── */
+.contact-form { margin-top: 1.5rem; }
+
+.form-hidden { display: none; }
+
+.form-label-opt {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+}
+
+.form-group { margin-bottom: 1.1rem; }
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tx-3);
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--ui-2);
+  border-radius: 4px;
+  padding: 0.55rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.925rem;
+  color: var(--tx);
+  transition: border-color 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23767370' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 7rem;
+  line-height: 1.6;
+}
+
+.form-submit {
+  background: var(--tx);
+  color: var(--bg);
+  border: none;
+  padding: 0.55rem 1.4rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 0.25rem;
+}
+
+.form-submit:hover { opacity: 0.75; }
 

@@ -2,7 +2,7 @@
 title: "HCI Methods in Medical Education Research"
 date: 2025-11-01
 description: "Applying human-centered design to how clinicians learn, not just how they work."
-tags: ["hci", "education", "medicine"]
+tags: ["HCI", "education", "medicine"]
 draft: false
 ---
 

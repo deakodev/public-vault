@@ -2,7 +2,7 @@
 title: "Clinical Decision Support and Attentional Capture"
 date: 2026-02-01
 description: "How do clinicians actually attend to decision support alerts during time-critical workflows?"
-tags: ["hci", "medicine", "dissertation"]
+tags: ["HCI", "medicine", "dissertation"]
 draft: false
 ---
 

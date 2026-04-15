@@ -5,43 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/index.xml">
+
+  <!-- Canonical & author -->
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="author" content="Zachary Deak">
+  <meta name="robots" content="index, follow">
+
+  <!-- Theme color (browser chrome on mobile) -->
+  <meta name="theme-color" content="#fffcf0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#100f0f" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}og-image.png">
+
+  <!-- JSON-LD -->
+  {{ if .IsHome }}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Zachary Deak","url":"{{ .Site.BaseURL }}","email":"deakzach@msu.edu","sameAs":["https://github.com/deakodev","https://www.linkedin.com/in/deakodev/"],"jobTitle":"Physician, PhD Student","affiliation":{"@type":"Organization","name":"Georgia Institute of Technology"}}</script>
+  {{ else if eq .Section "essays" }}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ .Title | jsonify }},"datePublished":"{{ .Date.Format "2006-01-02" }}","author":{"@type":"Person","name":"Zachary Deak"},"url":"{{ .Permalink }}"}</script>
+  {{ end }}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/index.xml">
+
   <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('theme-dark');}}());</script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="/" class="site-title">{{ .Site.Title }}</a>
       <div class="nav-links">
-        <a href="/bio">Bio</a>
-        <span class="sep">/</span>
-        <a href="/essays">Essays</a>
-        <span class="sep">/</span>
-        <a href="/projects">Projects</a>
-        <span class="sep">/</span>
-        <a href="/research">Research</a>
-        <span class="sep">/</span>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle theme (D)" aria-label="Toggle dark mode">◐</button>
+        <a href="/bio"{{ if eq .RelPermalink "/bio/" }} class="nav-active" aria-current="page"{{ end }}>Bio</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/essays"{{ if eq .Section "essays" }} class="nav-active" aria-current="page"{{ end }}>Essays</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/projects"{{ if eq .Section "projects" }} class="nav-active" aria-current="page"{{ end }}>Projects</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/research"{{ if eq .Section "research" }} class="nav-active" aria-current="page"{{ end }}>Research</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/consulting"{{ if eq .Section "consulting" }} class="nav-active" aria-current="page"{{ end }}>Consulting</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme (D)" aria-label="Toggle dark mode" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
       </div>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    <p>© {{ now.Format "2006" }} Zachary Deak</p>
+    <div class="footer-inner">
+      <p>© {{ now.Format "2006" }} Zachary Deak</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="#" id="zd-email">Email</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="https://github.com/deakodev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="https://www.linkedin.com/in/deakodev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="/index.xml">RSS</a>
+      </nav>
+    </div>
   </footer>
-  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="deako" data-description="Support me on Buy me a coffee!" data-message="Thank you for your support :)" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
   <script>
+    var u = 'deakzach', d = 'msu.edu';
+    document.getElementById('zd-email').href = 'mailto:' + u + '\u0040' + d;
+
     var btn = document.getElementById('theme-toggle');
     function toggleTheme() {
+      document.documentElement.classList.add('theme-transitioning');
       var isDark = document.documentElement.classList.toggle('theme-dark');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      setTimeout(function() {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 300);
     }
+    // Set initial aria-pressed state
+    btn.setAttribute('aria-pressed', document.documentElement.classList.contains('theme-dark') ? 'true' : 'false');
     btn.addEventListener('click', toggleTheme);
     document.addEventListener('keydown', function(e) {
       if (e.key === 'd' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
@@ -49,5 +110,6 @@
       }
     });
   </script>
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="deako" data-description="Support me on Buy me a coffee!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>

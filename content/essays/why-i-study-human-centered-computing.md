@@ -1,8 +1,12 @@
 ---
-title: "Why I study human-centered computing"
+title: Why I study human-centered computing
 date: 2026-04-04
-description: "On following questions from the clinic to the lab to Georgia Tech."
-tags: ["research", "hcc", "phd"]
+description: On following questions from the clinic to the lab to Georgia Tech.
+tags:
+  - research
+  - HCC
+  - PhD
+  - evergreen
 draft: false
 ---
 In the fall of 2026, I begin a new chapter as PhD student in Human-Centered Computing (HCC) at Georgia Tech. This essay is written from the threshold, not in retrospect. Here I attempt an honest impression of human-center computing, why I've decided to pursue it as a study, and what my future prospects in the field will entail.
@@ -13,8 +17,9 @@ US National Science Foundation
 
 GaTech School of Interactive Computing
 
-UPenn Department of Computer & Information Science
+[UPenn Department of Computer & Information Science](www.google.com)
 
+![](static/exacalidraw-svg-test.svg)
 
 ### Human-centered computing as a translational science
 

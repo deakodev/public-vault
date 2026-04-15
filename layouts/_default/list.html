@@ -1,6 +1,7 @@
 {{ define "main" }}
 <section>
   <h1 class="section-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="section-intro content">{{ . }}</div>{{ end }}
   <ul class="writing-list">
     {{ range .Pages.ByDate.Reverse }}
     <li>

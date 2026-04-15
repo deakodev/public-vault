@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="consulting-selector-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ with .Content }}
+  <p class="consulting-question">{{ . | plainify }}</p>
+  {{ end }}
+  <div class="consulting-selector">
+    <a href="/consulting/biomedical" class="consulting-choice">
+      <div class="consulting-choice-title">Biomedical &amp; Technical Consulting</div>
+      <div class="consulting-choice-desc">Health technology, clinical workflows, point-of-care systems, and research design.</div>
+    </a>
+    <a href="/consulting/career" class="consulting-choice">
+      <div class="consulting-choice-title">Career &amp; Application Advising</div>
+      <div class="consulting-choice-desc">CV review, personal statements, application strategy, and career path guidance for medicine and research.</div>
+    </a>
+  </div>
+</section>
+{{ end }}

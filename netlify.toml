@@ -4,3 +4,20 @@
 
 [build.environment]
   HUGO_VERSION = "0.145.0"
+
+# www → canonical redirect (non-www to www)
+[[redirects]]
+  from = "https://deako.dev/*"
+  to = "https://www.deako.dev/:splat"
+  status = 301
+  force = true
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"

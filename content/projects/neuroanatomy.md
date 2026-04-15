@@ -2,7 +2,7 @@
 title: "Tangible Neuroanatomy"
 date: 2025-03-01
 description: "Physical and digital tools for learning neuroanatomy through touch."
-tags: ["education", "hci", "fabrication"]
+tags: ["education", "HCI", "fabrication"]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "On staying a beginner"
 date: 2026-03-15
 description: "The most useful thing about being in two fields at once is the permanent permission to not know things."
-tags: ["research", "medicine"]
+tags: ["research", "medicine", "evergreen"]
 draft: false
 ---
 
