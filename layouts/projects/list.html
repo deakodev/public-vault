@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section>
+  <h1 class="section-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="section-intro content">{{ . }}</div>{{ end }}
+
+  {{ $ongoing := where .Pages "Params.ongoing" true }}
+  {{ $completed := where .Pages "Params.ongoing" "!=" true }}
+
+  <ul class="latest-list">
+    {{ range $ongoing.ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }} –</span>
+        <span class="latest-tag ongoing">Ongoing</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ range $completed.ByDate.Reverse }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
+        <span class="latest-tag">Complete</span>
+        <span class="latest-title">{{ .Title }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

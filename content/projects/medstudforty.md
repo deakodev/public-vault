@@ -3,6 +3,7 @@ title: "Medical Education Platform"
 date: 2025-09-01
 description: "A platform for medical students to study smarter and track progress."
 tags: ["medicine", "education", "web"]
+ongoing: true
 draft: false
 ---
 

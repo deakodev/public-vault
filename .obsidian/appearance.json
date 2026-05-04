@@ -1,4 +1,6 @@
 {
   "cssTheme": "Minimal",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "interfaceFontFamily": "",
+  "textFontFamily": "Montserrat"
 }

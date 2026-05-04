@@ -192,8 +192,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "781786189f2de7d3",
+  "active": "412296edf4fb3e1d",
   "lastOpenFiles": [
+    "layouts/index.html.tmp.62792.1776358458416",
+    "layouts/index.html.tmp.62792.1776358420770",
+    "static/style.css.tmp.13288.1776357974229",
+    "layouts/projects/list.html",
+    "layouts/projects",
     "static/cover-svg.svg",
     "public/cover-svg.svg",
     "content/consulting/career.md",
@@ -206,10 +211,6 @@
     "public/consulting/career",
     "public/consulting/biomedical/index.html",
     "public/consulting/biomedical",
-    "content/consulting/biomedical.md.tmp.18984.1776283045880",
-    "public/consulting/index.xml",
-    "public/consulting/index.html",
-    "public/consulting",
     "content/consulting/_index.md",
     "static/sun.svg",
     "static/og-image.png",
@@ -218,7 +219,6 @@
     "content/essays/why-i-study-human-centered-computing.md",
     "public/tree.svg",
     "public/moon.svg",
-    "static/moon.svg",
     "Excalidraw/Drawing 2026-04-05 19.51.25.excalidraw.md",
     "content/bio.md",
     "content/portfolio.md",

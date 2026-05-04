@@ -340,6 +340,8 @@ html.theme-dark .theme-toggle .icon-moon { display: none; }
   letter-spacing: -0.01em;
 }
 
+.latest-tag.ongoing { color: var(--accent); }
+
 /* ─── Article ─── */
 .post-header { margin-bottom: 2.5rem; }
 

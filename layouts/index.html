@@ -29,8 +29,8 @@
     {{ range first 1 (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
     <li>
       <a href="{{ .Permalink }}">
-        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
-        <span class="latest-tag">Project</span>
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}{{ if .Params.ongoing }} –{{ end }}</span>
+        <span class="latest-tag{{ if .Params.ongoing }} ongoing{{ end }}">{{ if .Params.ongoing }}Ongoing{{ else }}Complete{{ end }}</span>
         <span class="latest-title">{{ .Title }}</span>
       </a>
     </li>
@@ -80,8 +80,8 @@
     {{ range (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
     <li>
       <a href="{{ .Permalink }}">
-        <span class="latest-date">{{ .Date.Format "2006 · 01" }}</span>
-        <span class="latest-tag">Project{{ if $evergreen }}{{ if in $evergreen.Pages . }}<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline" aria-hidden="true"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg>{{ end }}{{ end }}</span>
+        <span class="latest-date">{{ .Date.Format "2006 · 01" }}{{ if .Params.ongoing }} –{{ end }}</span>
+        <span class="latest-tag{{ if .Params.ongoing }} ongoing{{ end }}">{{ if .Params.ongoing }}Ongoing{{ else }}Complete{{ end }}{{ if $evergreen }}{{ if in $evergreen.Pages . }}<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline" aria-hidden="true"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></svg>{{ end }}{{ end }}</span>
         <span class="latest-title">{{ .Title }}</span>
       </a>
     </li>

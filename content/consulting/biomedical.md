@@ -22,9 +22,8 @@ Rates vary by scope and engagement type.
 ---
 ## Get in touch
 
-<form name="consulting-biomedical" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form">
-  <input type="hidden" name="form-name" value="consulting-biomedical">
-  <p class="form-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+<form name="consulting-biomedical" netlify netlify-honeypot="bot-field" method="POST" class="contact-form">
+  <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
 
   <div class="form-group">
     <label for="name-bio">Name</label>
