@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2a18287e50776b0c",
+        "id": "0ef4fff84549fc7e",
         "type": "tabs",
         "children": [
           {
-            "id": "71e8096d45a0c92e",
+            "id": "d5f174ab836f9f57",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/portfolio.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "portfolio"
+              "title": "New tab"
             }
           }
         ]
@@ -192,12 +188,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "71e8096d45a0c92e",
+  "active": "d5f174ab836f9f57",
   "lastOpenFiles": [
+    "content/portfolio.md",
     "content/consulting/career.md",
     "content/consulting/biomedical.md",
     "content/research/hci-and-medical-education.md",
-    "content/portfolio.md",
     "content/projects/bedbug.md",
     "content/bio.md",
     "content/research/dissertation.md",
