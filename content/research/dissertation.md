@@ -6,13 +6,13 @@ tags: ["HCI", "medicine", "wearable", "sensing", "dissertation"]
 draft: false
 ---
 
-My PhD research at Georgia Tech focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics — with a particular emphasis on contexts where conventional medical infrastructure is absent or unreliable.
+My PhD research at Georgia Tech focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics, with a particular emphasis on contexts where conventional medical infrastructure is absent or unreliable.
 
 ## The core problem
 
 Most medical sensing technology is designed around access: access to power grids, to trained technicians, to hospital-grade calibration. That design assumption quietly excludes the populations who need monitoring most. Remote and underserved communities face a compounding disadvantage: higher burden of chronic disease, less access to routine care, and diagnostic tools that weren't built for their environment.
 
-Wearable and ambient sensing offers a different path — continuous, low-friction data collection that can operate at the point of need rather than the point of care. But getting there requires solving problems at multiple levels: hardware that is durable, low-power, and manufacturable at scale; signal processing pipelines that work with noisy, intermittent data; and interfaces designed for users who are not clinicians.
+Wearable and ambient sensing offers a different path: continuous, low-friction data collection that can operate at the point of need rather than the point of care. But getting there requires solving problems at multiple levels: hardware that is durable, low-power, and manufacturable at scale; signal processing pipelines that work with noisy, intermittent data; and interfaces designed for users who are not clinicians.
 
 ## Research direction
 

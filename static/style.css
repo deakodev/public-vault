@@ -503,7 +503,7 @@ footer {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--ui-2);
-  margin-bottom: 0.75rem;
+  margin-bottom: 2.5rem;
 }
 
 .welcome-card::before {

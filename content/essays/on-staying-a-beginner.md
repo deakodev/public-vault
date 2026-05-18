@@ -8,7 +8,7 @@ draft: false
 
 Being a physician-researcher means being a beginner in two places at once, more or less indefinitely.
 
-In the clinic, I know enough to be useful and not enough to stop learning. In the lab, the same. The overlap between the two — the territory where I'm supposed to have something to contribute — is a narrow strip that I'm still figuring out the shape of.
+In the clinic, I know enough to be useful and not enough to stop learning. In the lab, the same. The overlap between the two (the territory where I'm supposed to have something to contribute) is a narrow strip that I'm still figuring out the shape of.
 
 This used to feel like a problem. It now feels like the point.
 

@@ -9,7 +9,7 @@ tags:
 draft: true
 ---
 
-Most medical education research asks whether an intervention improves test scores. This is the wrong question, or at least an incomplete one. Test scores measure recall under artificial conditions. Clinical competence involves pattern recognition, reasoning under uncertainty, and knowing what you don't know — none of which are well-captured by a multiple choice exam.
+Most medical education research asks whether an intervention improves test scores. This is the wrong question, or at least an incomplete one. Test scores measure recall under artificial conditions. Clinical competence involves pattern recognition, reasoning under uncertainty, and knowing what you don't know, none of which are well-captured by a multiple choice exam.
 
 ## The argument
 
@@ -21,4 +21,4 @@ When you watch a medical student work through a clinical case and ask them to na
 
 If you're building educational software for medical students, the relevant design question isn't "does this help them score better?" It's "does this help them reason better?" Those are related but not the same.
 
-This is the frame I bring to MedStudForty and the Tangible Neuroanatomy project — both are attempts to build tools evaluated against how well they support the cognitive work of clinical reasoning, not just content acquisition.
+This is the frame I bring to MedStudForty and the Tangible Neuroanatomy project, both of which attempt to build tools evaluated against how well they support the cognitive work of clinical reasoning, not just content acquisition.
