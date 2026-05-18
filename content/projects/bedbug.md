@@ -1,29 +1,27 @@
 ---
-title: 3D Rendering Engine
+title: "3D Rendering Engine"
 date: 2024-11-01
-description: A software 3D renderer written from scratch in C.
-tags:
-  - graphics
-  - c
-  - systems
+description: "A medical visualization engine built in C and Vulkan for rendering anatomical models and DICOM imaging data."
+tags: ["graphics", "c", "vulkan", "dicom", "medicine", "systems"]
 ongoing: true
 draft: false
 ---
 
-Bedbug is a software rasterizer built from scratch — no OpenGL, no GPU. It implements the full pipeline: perspective projection, triangle rasterization, z-buffering, texture mapping, and a basic lighting model. Written in C.
+Bedbug is a real-time visualization engine built from scratch in C99 and Vulkan, targeting anatomical model rendering and medical imaging data for educational and diagnostic applications.
 
 ## Why build this
 
-I wanted to understand what graphics hardware is actually doing. Using a library like OpenGL abstracts away the math in a way that works for shipping products but leaves gaps if you want to understand what's happening. Writing a renderer from scratch forces you to confront every step: how a 3D point becomes a 2D pixel, how you determine which surfaces are visible, how lighting interacts with geometry.
+Medical education and diagnostics both depend on spatial understanding of three-dimensional anatomy. Most existing tools either lock you into expensive proprietary software or sacrifice real-time interactivity for data fidelity. Building a renderer from scratch — with a graphics pipeline I own entirely — means I can optimize specifically for this domain: variable-resolution anatomical meshes, multi-planar DICOM reconstruction, and overlays that make sense for clinical reading rather than gaming.
 
 ## What it does
 
-- Perspective-correct texture mapping
-- Flat and Gouraud shading
-- Z-buffer for depth sorting
-- Loads and renders OBJ files
-- Runs in a software framebuffer (no GPU required)
+- Vulkan-based rendering pipeline for real-time performance on anatomical geometry
+- DICOM file parser and interactive viewer for exploring medical imaging datasets
+- Support for loading and rendering anatomical meshes for spatial study
+- Designed around educational and diagnostic display requirements, not game engine conventions
 
-The name is a nod to the bugs you inevitably find when you're hand-rolling matrix math at 2am.
+## Stack
+
+C99, Vulkan, Bash
 
 [GitHub](https://github.com/deakodev/bedbug)
