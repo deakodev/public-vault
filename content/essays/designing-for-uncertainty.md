@@ -12,7 +12,7 @@ This framing is wrong, or at least incomplete.
 
 ## Most decisions aren't data-limited
 
-In my experience at the bedside, the hard calls aren't usually the ones where I lack information. They're the ones where I have a lot of information that points in different directions, and I need to act anyway — often quickly, often irreversibly.
+In my experience at the bedside, the hard calls aren't usually the ones where I lack information. They're the ones where I have a lot of information that points in different directions, and I need to act anyway, often quickly, often irreversibly.
 
 The cognitive challenge isn't retrieval. It's integration and commitment under uncertainty.
 
@@ -26,9 +26,9 @@ A few things I keep coming back to:
 
 **Calibration over confidence.** Decision support tools tend to present outputs as answers. A probability estimate that says "82% chance of sepsis" is treated as a fact rather than a distribution. What if the interface instead communicated the model's confidence interval, or flagged the cases it tends to get wrong?
 
-**Legible reasoning.** When I disagree with a recommendation, I want to understand why it was made — not to override it, but to integrate it with what I know that the system doesn't. Black-box tools fail here. The path to trust isn't accuracy alone; it's transparency about the basis for the output.
+**Legible reasoning.** When I disagree with a recommendation, I want to understand why it was made, not to override it, but to integrate it with what I know that the system doesn't. Black-box tools fail here. The path to trust isn't accuracy alone; it's transparency about the basis for the output.
 
-**Supporting commitment, not just deliberation.** Eventually you have to act. Interfaces that endlessly surface options without supporting the move from analysis to decision aren't serving the clinician — they're serving the designer's discomfort with the messy reality of practice.
+**Supporting commitment, not just deliberation.** Eventually you have to act. Interfaces that endlessly surface options without supporting the move from analysis to decision aren't serving the clinician; they're serving the designer's discomfort with the messy reality of practice.
 
 ## What this means for research
 

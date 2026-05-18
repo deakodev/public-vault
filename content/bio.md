@@ -17,7 +17,7 @@ I write code the same way I approach a clinical problem: understand the system, 
 ---
 ## Where I'm going
 
-Incoming PhD student (fall 2026) at ***Georgia Institute of Technology*** in Human-Centered Computing, advised by Dr. Alexander T Adams. My research focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics — grounded in clinical partnerships and the constraint that the tools have to work where conventional medical infrastructure doesn't reach.
+Incoming PhD student (fall 2026) at ***Georgia Institute of Technology*** in Human-Centered Computing, advised by Dr. Alexander T Adams. My research focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics, grounded in clinical partnerships and the constraint that the tools have to work where conventional medical infrastructure doesn't reach.
 
 ---
 ## Where I'm at

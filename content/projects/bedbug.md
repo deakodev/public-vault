@@ -11,7 +11,7 @@ Bedbug is a real-time visualization engine built from scratch in C99 and Vulkan,
 
 ## Why build this
 
-Medical education and diagnostics both depend on spatial understanding of three-dimensional anatomy. Most existing tools either lock you into expensive proprietary software or sacrifice real-time interactivity for data fidelity. Building a renderer from scratch — with a graphics pipeline I own entirely — means I can optimize specifically for this domain: variable-resolution anatomical meshes, multi-planar DICOM reconstruction, and overlays that make sense for clinical reading rather than gaming.
+Medical education and diagnostics both depend on spatial understanding of three-dimensional anatomy. Most existing tools either lock you into expensive proprietary software or sacrifice real-time interactivity for data fidelity. Building a renderer from scratch (with a graphics pipeline I own entirely) means I can optimize specifically for this domain: variable-resolution anatomical meshes, multi-planar DICOM reconstruction, and overlays that make sense for clinical reading rather than gaming.
 
 ## What it does
 

@@ -19,7 +19,7 @@ MedStudForty is a full-stack platform built to improve preclinical diagnostic re
 
 ## What drove the design
 
-Existing board prep tools (UWorld, Amboss) are closed systems. Building the platform myself meant I could instrument it exactly — tracking not just whether a student got a question right, but how long they spent, where they hesitated, and which conceptual gaps kept reappearing. That data shaped both the tutoring and the question bank.
+Existing board prep tools (UWorld, Amboss) are closed systems. Building the platform myself meant I could instrument it exactly, tracking not just whether a student got a question right, but how long they spent, where they hesitated, and which conceptual gaps kept reappearing. That data shaped both the tutoring and the question bank.
 
 ## Stack
 
