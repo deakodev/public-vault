@@ -7,7 +7,7 @@ tags:
   - HCC
   - PhD
   - evergreen
-draft: false
+draft: true
 ---
 In the fall of 2026, I begin a new chapter as PhD student in Human-Centered Computing (HCC) at Georgia Tech. This essay is written from the threshold, not in retrospect. Here I attempt an honest impression of human-center computing, why I've decided to pursue it as a study, and what my future prospects in the field will entail.
 

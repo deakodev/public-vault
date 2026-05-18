@@ -1,9 +1,12 @@
 ---
-title: "Medical Education Platform"
+title: Medical Education Platform
 date: 2025-09-01
-description: "A platform for medical students to study smarter and track progress."
-tags: ["medicine", "education", "web"]
-ongoing: true
+description: A platform for medical students to study smarter and track progress.
+tags:
+  - medicine
+  - education
+  - web
+ongoing: false
 draft: false
 ---
 

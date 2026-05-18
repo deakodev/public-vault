@@ -1,9 +1,12 @@
 ---
-title: "HCI Methods in Medical Education Research"
+title: HCI Methods in Medical Education Research
 date: 2025-11-01
-description: "Applying human-centered design to how clinicians learn, not just how they work."
-tags: ["HCI", "education", "medicine"]
-draft: false
+description: Applying human-centered design to how clinicians learn, not just how they work.
+tags:
+  - HCI
+  - education
+  - medicine
+draft: true
 ---
 
 Most medical education research asks whether an intervention improves test scores. This is the wrong question, or at least an incomplete one. Test scores measure recall under artificial conditions. Clinical competence involves pattern recognition, reasoning under uncertainty, and knowing what you don't know — none of which are well-captured by a multiple choice exam.

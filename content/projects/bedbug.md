@@ -1,9 +1,12 @@
 ---
-title: "3D Rendering Engine"
+title: 3D Rendering Engine
 date: 2024-11-01
-description: "A software 3D renderer written from scratch in C."
-tags: ["graphics", "c", "systems"]
-ongoing: false
+description: A software 3D renderer written from scratch in C.
+tags:
+  - graphics
+  - c
+  - systems
+ongoing: true
 draft: false
 ---
 
