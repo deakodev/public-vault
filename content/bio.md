@@ -2,11 +2,12 @@
 title: "Bio"
 draft: false
 ---
- [CV](/deak_cv.pdf)  ·  [GitHub](https://github.com/deakodev)  ·  [LinkedIn](https://www.linkedin.com/in/deakodev/)
----
+
+## [CV](/deak-cv.pdf) · [GitHub](https://github.com/deakodev) · [LinkedIn](https://www.linkedin.com/in/deakodev/)
+
 ## Zachary Deak, DO
 
-Welcome to my digital garden. I'm Zach, though you might know me as *Deako*.
+Welcome to my digital garden. I'm Zach, though you might know me as _Deako_.
 
 I'm a medical school graduate and self-taught programmer. I'm drawn to problems that sit at the crossroads of clinical need, hardware and software limits, and human context. I don't fit neatly into either world anymore, and I've stopped trying.
 
@@ -15,11 +16,13 @@ My interests live at the intersection of wearable and ubiquitous sensing, signal
 I write code the same way I approach a clinical problem: understand the system, identify what's actually failing, and resist over-engineering the fix. I'm equally comfortable in a lab, at a terminal, or in a conversation about why something isn't working for the people it was built for.
 
 ---
+
 ## Where I'm going
 
-Incoming PhD student (fall 2026) at ***Georgia Institute of Technology*** in Human-Centered Computing, advised by Dr. Alexander T Adams. My research focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics, grounded in clinical partnerships and the constraint that the tools have to work where conventional medical infrastructure doesn't reach.
+Incoming PhD student (fall 2026) at **_Georgia Institute of Technology_** in Human-Centered Computing, advised by Dr. Alexander T Adams. My research focuses on wearable and ubiquitous sensing systems for remote health monitoring and diagnostics, grounded in clinical partnerships and the constraint that the tools have to work where conventional medical infrastructure doesn't reach.
 
 ---
+
 ## Where I'm at
 
 The years between finishing medical school and starting graduate school were spent building things, learning what it actually takes to put a tool in someone's hands, and getting very comfortable with myself.
@@ -27,9 +30,10 @@ The years between finishing medical school and starting graduate school were spe
 I wrote software and tutored medical students, iterating on problems without clean answers. It sharpened something I couldn't have gotten any other way.
 
 ---
+
 ## Where I've been
 
-Medical degree (DO) from ***Michigan State University College of Osteopathic Medicine***, with clerkship training at the ***Detroit Medical Center***. Undergraduate degree (BS) from ***Central Michigan University*** in Biomedical Sciences, where I spent several years doing translational neuroscience research.
+Medical degree (DO) from **_Michigan State University College of Osteopathic Medicine_**, with clerkship training at the **_Detroit Medical Center_**. Undergraduate degree (BS) from **_Central Michigan University_** in Biomedical Sciences, where I spent several years doing translational neuroscience research.
 
 And as always -- Go Green! And Fire Up Chips!
 
