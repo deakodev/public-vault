@@ -11,10 +11,14 @@
             "id": "d5f174ab836f9f57",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/projects/neuroanatomy.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "neuroanatomy"
             }
           }
         ]
@@ -190,6 +194,11 @@
   },
   "active": "d5f174ab836f9f57",
   "lastOpenFiles": [
+    "content/research/neuroscience.md",
+    "content/research/clinical-case.md",
+    "content/essays/designing-for-uncertainty.md",
+    "content/projects/medstudforty.md",
+    "content/essays/why-i-study-human-centered-computing.md",
     "content/portfolio.md",
     "content/consulting/career.md",
     "content/consulting/biomedical.md",
@@ -197,12 +206,10 @@
     "content/projects/bedbug.md",
     "content/bio.md",
     "content/research/dissertation.md",
-    "content/projects/medstudforty.md",
     "content/projects/neuroanatomy.md",
     "content/essays/how-i-take-notes.md",
     "content/essays/how-to-write-safety-critical-code.md",
     "content/essays/on-staying-a-beginner.md",
-    "content/essays/why-i-study-human-centered-computing.md",
     "[!!Con.md",
     "layouts/index.html.tmp.62792.1776358458416",
     "layouts/index.html.tmp.62792.1776358420770",
@@ -232,9 +239,6 @@
     "content/essays/hello.md",
     "content/research.md",
     "content/projects copy.md",
-    "content/projects.md",
-    "content/essays.md",
-    "content/posts/hello.md",
-    "content/about.md"
+    "content/projects.md"
   ]
 }
